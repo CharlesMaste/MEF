@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+:root{
+    /* 
+        #DEE5F9
+        #C3D0DB
+        #E3EFF2
+        #C3DBDA
+        #DEF9F0
+     */
+     --cor01: #DEE5F9;
+     --cor02: #C3D0DB;
+     --cor03: #E3EFF2;
+     --cor04: #c3dbdaa9;
+     --cor05: #DEF9F0;
+
+     --radius: 5px;
+}
+
+.container{
+    display: grid;
+    height: calc(100vh - 20px);
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 0.5fr 5fr 0.5fr;
+    grid-template-areas: 
+        "nav      nav    nav"
+        "leftside main   rightside"
+        "footer   footer footer"
+    ;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;    
+    grid-gap: 0.1em;
+}
+
+nav{
+    background-color: var(--cor01);
+    grid-area: nav;
+    border-radius: var(--radius);
+}
+
+/* como chamar o identificador da id */
+#leftside{
+    background-color: var(--cor02);
+    grid-area: leftside;
+    border-radius: var(--radius);
+}
+
+#rightside{
+    background-color: var(--cor03);
+    grid-area: rightside;
+    border-radius: var(--radius);
+}
+
+main{
+    background-color: var(--cor04);
+    grid-area: main;
+    border-radius: var(--radius);
+}
+
+footer{
+    background-color: var(--cor05);
+    grid-area: footer;
+    border-radius: var(--radius);
+}
+
+@media only screen and (max-width: 550px){
+    .container{
+        display: grid;
+        height: calc(100vh - 20px);
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 0.4fr 5fr 0.4fr;
+        grid-template-areas: 
+            "nav"
+            "leftside"
+            "rightside"
+            "main"
+            "footer"
+        ;
+    
+        text-align: center;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;    
+        grid-gap: 0.1em;
+    }
+}
