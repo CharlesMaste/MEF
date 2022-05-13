@@ -32,27 +32,27 @@
     grid-row-end: 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color:aquamarine;
+    background-color:rgb(146, 150, 149);
 }
 
 .box2 {
     border-radius: var(--radius);
-    background-color: #7c876a;
+    background-color: #6a6a69;
 }
 
 .box3 {
     border-radius: var(--radius);
-    background-color: #8cdc0d;
+    background-color: #424241;
 }
 
 .box4 {
     border-radius: var(--radius);
-    background-color: #170ddc;
+    background-color: #3f3f46;
 }
 
 .box5 {
     border-radius: var(--radius);
-    background-color: #e6e8e3;
+    background-color: #2e302c;
 }
 
 @media only screen and (max-width: 500px) {
