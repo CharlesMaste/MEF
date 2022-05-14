@@ -5,19 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro layout</title>    
+    <title>Primeiro layout</title>
     <link rel="stylesheet" href="style.css">
     <script src="p5/p5.js"></script>
 </head>
 
 <body class="container">
-    <nav>navbar</nav>
+    <nav>
+        <button type="button">Click Me!</button>
+        <img src="icons/Mundo.png" alt="FIT" width="35" height="35" onclick="fitToWorld()">
+        <button type="button">Click Me!</button>
+        <img src="icons/Mundo.png" alt="ZooIN" width="35" height="35" onclick="ZooIN()">
+        <button type="button">Click Me!</button>
+        <img src="icons/Mundo.png" alt="ZooOut" width="35" height="35" onclick="ZooOut()">
+        <button type="button">Click Me!</button>
+        <img src="icons/Mundo.png" alt="PanLeft" width="35" height="35" onclick="PanLeft()">
+        <button type="button">Click Me!</button>
+        <img src="icons/Mundo.png" alt="PanRight" width="35" height="35" onclick="PanRight()">
+    </nav>
     <div id="leftside">leftside</div>
     <main>
         <script src="sketch.js"></script>
     </main>
     <div id="rightside">rightside</div>
-    <footer>footer</footer>    
+    <footer>footer</footer>
 </body>
 
 

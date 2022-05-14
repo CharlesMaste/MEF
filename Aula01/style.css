@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-:root{
+:root {
     /* 
         #DEE5F9
         #C3D0DB
@@ -8,21 +8,21 @@
         #C3DBDA
         #DEF9F0
      */
-     --cor01: #DEE5F9;
-     --cor02: #C3D0DB;
-     --cor03: #E3EFF2;
-     --cor04: #c3dbdaa9;
-     --cor05: #DEF9F0;
+    --cor01: #DEE5F9;
+    --cor02: #C3D0DB;
+    --cor03: #E3EFF2;
+    --cor04: #c3dbdaa9;
+    --cor05: #DEF9F0;
 
-     --radius: 5px;
+    --radius: 5px;
 }
 
-.container{
+.container {
     display: grid;
     height: calc(100vh - 20px);
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 0.5fr 5fr 0.5fr;
-    grid-template-areas: 
+    grid-template-areas:
         "nav      nav    nav"
         "leftside main   rightside"
         "footer   footer footer"
@@ -31,59 +31,82 @@
     text-align: center;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;    
+    font-size: 1em;
     grid-gap: 0.1em;
 }
 
-nav{
-    background-color: var(--cor01);
+nav {
+    background-color: var(--cor02);
     grid-area: nav;
     border-radius: var(--radius);
+    text-align: left;
+}
+
+.botão {
+    padding: 2px;
+    margin: 1px;
+    border: 0.1px solid black;
+    border-radius: 5px;
+    line-height: 1em;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 0px black;
+
+    transition: box-shadow 0.08s ease, transform 0.08s ease;
+}
+
+.botaão:hover{
+    background-color: var(--cor01) ;
+}
+
+.botaão:active{
+    box-shadow: 0 0 0 0 black, inset 0.6px 0.6px 0px 0.6px black;
+
+    transform: translate(0.5px 0.5px);
 }
 
 /* como chamar o identificador da id */
-#leftside{
-    background-color: var(--cor02);
+#leftside {
+    background-color: var(--cor01);
     grid-area: leftside;
     border-radius: var(--radius);
 }
 
-#rightside{
-    background-color: var(--cor03);
+#rightside {
+    background-color: var(--cor01);
     grid-area: rightside;
     border-radius: var(--radius);
 }
 
-main{
+main {
     background-color: var(--cor04);
     grid-area: main;
     border-radius: var(--radius);
 }
 
-footer{
-    background-color: var(--cor05);
+footer {
+    background-color: var(--cor02);
     grid-area: footer;
     border-radius: var(--radius);
 }
 
-@media only screen and (max-width: 550px){
-    .container{
+@media only screen and (max-width: 550px) {
+    .container {
         display: grid;
         height: calc(100vh - 20px);
         grid-template-columns: 1fr;
         grid-template-rows: 0.4fr 0.4fr 0.4fr 5fr 0.4fr;
-        grid-template-areas: 
+        grid-template-areas:
             "nav"
             "leftside"
             "rightside"
             "main"
             "footer"
         ;
-    
+
         text-align: center;
         text-transform: uppercase;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 1em;    
+        font-size: 1em;
         grid-gap: 0.1em;
     }
 }
