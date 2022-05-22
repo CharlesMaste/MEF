@@ -51,3 +51,10 @@ function PanLeft(){
 function PanRight(){
     window.alert('PanRight')
 }
+
+function PanUp(){
+    window.alert('PanUp')
+}
+function PanDown(){
+    window.alert('PanDown')
+}
