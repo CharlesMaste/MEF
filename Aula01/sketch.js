@@ -9,7 +9,11 @@ function setup() {
     }
 
     createCanvas(x, y, WEBGL)
-    noLoop()
+    //noLoop()
+
+    /* instanciar um objeto */
+    _model = new Model()
+
 }
 
 var count = 0
@@ -24,37 +28,51 @@ function windowResized() {
 
     resizeCanvas(x, y)
 }
+
+
 function draw() {
     background(173, 216, 230)
+    _model.showModel()
+}
+
+function mouseMoved() {
+    
 }
 
 function mousePressed() {
 
 }
 
-function fitToWorld(){
-    window.alert('FUNFOU')
+function fitToWorld() {
+    window.alert('funfou')
+    
 }
 
-function ZooIN(){
-    window.alert('ZooIN')
+function ZooIN() {
+    _model.color1 = _model.color1 - 10
+    _model.color2 = 10
+    _model.color3 -= 10
+    redraw()
 }
 
-function ZooOut(){
-    window.alert('ZooOut')
+function ZooOut() {
+    _model.color1 = _model.color1 + 10
+    _model.color2 = 10
+    _model.color3 = 10
+    redraw()
 }
 
-function PanLeft(){
+function PanLeft() {
     window.alert('PanLeft')
 }
 
-function PanRight(){
+function PanRight() {
     window.alert('PanRight')
 }
 
-function PanUp(){
+function PanUp() {
     window.alert('PanUp')
 }
-function PanDown(){
+function PanDown() {
     window.alert('PanDown')
 }
