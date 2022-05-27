@@ -9,10 +9,11 @@ function setup() {
     }
 
     createCanvas(x, y, WEBGL)
-    //noLoop()
+    noLoop()
 
     /* instanciar um objeto */
     _model = new Model()
+    _view  = new view ()
 
 }
 
@@ -33,6 +34,7 @@ function windowResized() {
 function draw() {
     background(173, 216, 230)
     _model.showModel()
+    _view.showCamera()
 }
 
 function mouseMoved() {
@@ -63,11 +65,15 @@ function ZooOut() {
 }
 
 function PanLeft() {
-    window.alert('PanLeft')
+    _view._left +=1
+    _view._right +=1
+    redraw()
 }
 
 function PanRight() {
-    window.alert('PanRight')
+    _view._left -=1
+    _view._right -=1
+    redraw()
 }
 
 function PanUp() {
